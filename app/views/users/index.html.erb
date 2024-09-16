@@ -1,0 +1,31 @@
+<% content_for :title, "Users" %>
+
+<div class="flex justify-between items-center mb-6">
+  <h1 class="text-2xl font-bold">Users</h1>
+</div>
+
+<div id="users">
+  <table class="w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="border p-2 text-left">Email</th>
+        <th class="border p-2 text-left">Bio</th>
+        <th class="border p-2 w-1/4 text-left"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td class="border p-2"><%= user.email %></td>
+          <td class="border p-2"><%= truncate(user.bio, length: 100) %></td>
+          <td class="border p-2 text-end">
+          <% if current_user && current_user.admin? %>
+            <%= link_to "View", user, class: "btn btn-secondary" %>
+            <%= link_to "Edit", edit_user_path(user), class: "btn btn-secondary" %>
+          <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

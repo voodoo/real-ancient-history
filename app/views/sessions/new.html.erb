@@ -1,0 +1,8 @@
+<h1>Log In</h1>
+<%= form_with url: sessions_path, local: true do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email, required: true, class: 'border border-gray-300 rounded-md p-2' %>
+  <div class="mt-4">
+    <%= f.submit 'Send Login Link', class: 'bg-blue-500 block text-white px-4 py-2 rounded-md' %>
+  </div>
+<% end %>

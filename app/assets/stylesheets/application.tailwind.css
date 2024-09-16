@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    @apply text-2xl font-bold;
+  }
+  
+  button, input[type="submit"] {
+    @apply bg-blue-500 text-white px-4 py-2 rounded;
+  }
+  
+  a.btn {
+      @apply bg-gray-500 text-white p-2  rounded ;
+    }
+  
+  a.btn-primary {
+      @apply bg-blue-500;
+    }
+  
+  a.btn-primary:hover {
+      @apply bg-blue-700;
+    }
+  
+  a.btn-secondary {
+      @apply bg-gray-500;
+    }
+    a.btn-secondary:hover {
+      @apply bg-gray-700;
+    }
+

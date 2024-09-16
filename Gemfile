@@ -57,3 +57,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Use PostgreSQL as the database for Active Record
+gem 'pg'
